@@ -1,0 +1,37 @@
+<h1>The Body Of The Index Page</h1>
+
+
+<div class="accordion" id="accordionExample">
+    
+    {{#each animals}}
+    
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="heading{{this.id}}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{this.id}}" aria-expanded="false" aria-controls="collapseTwo">
+        {{this.name}}
+      </button>
+    </h2>
+    <div id="collapse{{this.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+
+        <div class="card" style="width: 500px;">
+            <div class="row no-gutters">
+                <div class="col-sm-5">
+                    <img class="card-img" src={{this.image_link}} alt="Suresh Dasari Card">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Suresh Dasari</h5>
+                        <p class="card-text">Suresh Dasari is a founder and technical lead developer in tutlane.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {{/each}}
+
+</div>
