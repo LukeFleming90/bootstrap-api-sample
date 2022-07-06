@@ -1,6 +1,3 @@
-<h1>The Body Of The Index Page</h1>
-
-
 <div class="accordion" id="accordionExample">
     
     {{#each animals}}
@@ -14,20 +11,26 @@
     <div id="collapse{{this.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
 
-        <div class="card" style="width: 500px;">
-            <div class="row no-gutters">
-                <div class="col-sm-5">
-                    <img class="card-img" src={{this.image_link}} alt="Suresh Dasari Card">
+        <div class="card" style="max-width: 700px;">
+          <div class="row g-0">
+            <div class="d-flex align-items-center justify-content-center col-sm-5" style="background: #868e96;">
+              <img src={{this.image_link}} height="85%" class="card-img-top" alt="...">
+              </div>
+              <div class="col-sm-7">
+                <div class="card-body">
+                  <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">The {{this.name}}, also known as the {{this.latin_name}} is a {{this.animal_type}} found in {{this.geo_range}}. It mainly eats {{this.diet}} and lives in a {{this.habitat}} habitat.</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Weight Range: {{this.weight_min}} to {{weight_max}}</li>
+                    <li class="list-group-item">Length Range: {{this.length_min}} to {{this.length_max}}</li>
+                    <li class="list-group-item">Average Lifespan: {{this.lifespan}}</li>
+                  </ul>
                 </div>
-                <div class="col-sm-7">
-                    <div class="card-body">
-                        <h5 class="card-title">Suresh Dasari</h5>
-                        <p class="card-text">Suresh Dasari is a founder and technical lead developer in tutlane.</p>
-                    </div>
-                </div>
+              </div>
             </div>
-        </div>
-
+          </div>
       </div>
     </div>
   </div>
